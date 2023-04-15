@@ -1,0 +1,57 @@
+.about{
+padding: 40px 0;
+display: flex;
+justify-content: space-between;
+}
+
+.about-info{
+max-width: 400px;
+}
+
+.about-skills{
+  flex: 1 1 auto;
+  margin: 0 0 0 50px;
+}
+.about a{
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+.about a:visited{
+  color: #000;
+}
+.about a:hover{
+  color: #337AB7;
+}
+.about-title{
+  font-weight: bold;
+}
+.about-description{
+  display: inline-block;
+}
+.about-education-count{
+  display: flex;
+}
+.about-education{
+  margin: 15px 50px 0 0;
+}
+.education-img{
+  margin: 15px 0 0 0;
+  max-width: 400px;
+}
+
+@media (max-width: 1300px) {
+  .about{
+    display: block;
+    }
+  .about-skills{
+      margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 900px) {
+  .education-img{
+    margin: 10px 0 0 0;
+    max-width: 200px;
+  }
+}

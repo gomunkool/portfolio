@@ -1,0 +1,26 @@
+.projects-list-item{
+  width: 23.5%;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0 15px 0 0;
+}
+
+.projects-list-item:hover h4{
+  color: #337AB7;
+}
+
+.projects-list-item-img{
+  max-width: 100%;
+  max-height: 200px;
+}
+
+@media (max-width: 1000px) {
+  .projects-list-item{
+    width: 45%;
+  }
+}
+@media (max-width: 700px) {
+  .projects-list-item{
+    width: 90%;
+  }
+}

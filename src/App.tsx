@@ -23,7 +23,7 @@ function App() {
             <ul className="navigation">
               <li>
                 <NavLink to="/" className="border-button">
-                  My Projects
+                  Projects
                 </NavLink>
               </li>
               <li>

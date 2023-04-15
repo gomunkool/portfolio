@@ -1,9 +1,42 @@
 import React, { useState } from 'react'
 import './Projects.css'
 import { BiGridAlt, BiSquare } from 'react-icons/bi'
+import {
+  projectsData,
+  ProjectsDataType,
+} from '../../data/projectsData/projectsData'
+import ProjectItemFromList from '../../components/ProjectItemFromList/ProjectItemFromList'
+import ProjectSlider from '../../components/ProjectSlider/ProjectSlider'
 
 const Projects = (): JSX.Element => {
   const [viewProjects, setViewProjects] = useState(true)
+
+  const showAllProjects = () => {
+    return projectsData.map(
+      ({
+        id,
+        title,
+        description,
+        technologyStack,
+        demoLink,
+        gitRepoLink,
+        img,
+      }: ProjectsDataType): JSX.Element => {
+        return (
+          <ProjectItemFromList
+            key={id}
+            id={id}
+            title={title}
+            description={description}
+            technologyStack={technologyStack}
+            demoLink={demoLink}
+            gitRepoLink={gitRepoLink}
+            img={img}
+          />
+        )
+      }
+    )
+  }
 
   return (
     <div className="main-page">
@@ -22,19 +55,9 @@ const Projects = (): JSX.Element => {
         />
       </div>
       {viewProjects ? (
-        <div className="slider">
-          <div className="arrow arrow-left ">
-            <div className="arrow-top arrow-left-top"></div>
-            <div className="arrow-bottom arrow-left-bottom"></div>
-          </div>
-          <div>Первый вариант</div>
-          <div className="arrow arrow-right">
-            <div className="arrow-top arrow-right-top"></div>
-            <div className="arrow-bottom arrow-right-bottom"></div>
-          </div>
-        </div>
+        <ProjectSlider />
       ) : (
-        <div className="list">ВТРОЙ ВАРИАНТ</div>
+        <div className="project-list-count">{showAllProjects()}</div>
       )}
     </div>
   )

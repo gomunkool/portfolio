@@ -6,6 +6,7 @@
 .header-count{
   display: flex;
   justify-content: space-between;
+  height: 14vh;
 }
 
 .navigation {
